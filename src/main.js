@@ -6,7 +6,7 @@ function sync (dom, pos) {
 	dom.style.left = `${pos.x}px`;
 	dom.style.top = `${pos.y}px`;
 }
-`${pos.x}px`
+//`${pos.x}px`
 
 function addClicker () {
 	const pos = {
@@ -14,7 +14,7 @@ function addClicker () {
 		y: Math.random() * 300
 	};
 	const img = new Image();
-	img.src = "res/images/rick.png"
+	img.src = "res/images/rick.jpeg"
 	img.style.position = "absolute";
 	img.addEventListener("click", removeClicker, false);
 
@@ -22,7 +22,7 @@ function addClicker () {
 	sync(img,pos);
 }
 
-function removeCLicker (e) {
+function removeClicker (e) {
 	e.target.parentNode.removeChild(e.target);
 	clickers--;
 	checkGameOver();
